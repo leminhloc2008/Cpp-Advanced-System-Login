@@ -114,6 +114,6 @@ int main()
 //Page: https://lml-studio.itch.io/
 //You can use my code without credit but I'll appreciate if you do
 /*Change logs:
-  v1.0(05/03/2021): Project Finished
+  v1.0(08/03/2021): Project Finished
 */
 
