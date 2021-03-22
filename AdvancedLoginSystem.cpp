@@ -112,7 +112,6 @@ int main()
 //You can use my code without credit but I'll appreciate if you do
 /*Change logs:
   v1.0(05/03/2021): Project Finished
-  v2.0(14/03/2021): Added a feature that if the user type the username password wrong 5 times then
-  the program wil stop
+  v2.0(14/03/2021): Added a feature that if the user type the username password wrong 5 times then the program wil stop
   v3.0(22/03/2021): Make the code more beautiful, easy to read. Compatibility with Visual Studio 2019
 */
