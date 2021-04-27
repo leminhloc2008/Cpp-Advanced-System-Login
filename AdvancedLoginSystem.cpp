@@ -78,7 +78,8 @@ int main()
                 remain--;
                 login_successful = false;
             }
-        } while (!login_successful && remain != -1);
+        } 
+        while (!login_successful && remain != -1);
         if (remain == -1)
         {
             SetColor(12);
