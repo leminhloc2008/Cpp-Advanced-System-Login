@@ -6,7 +6,7 @@ A subscribe is free, so consider subscribe me if you like my program
 
 
 Games Page:
-/n Itch.io : https://lml-studio.itch.io/
+\n Itch.io : https://lml-studio.itch.io/
 Game Jolt: https://gamejolt.com/@LML_STUDIO
 Newground: https://lmlstudio.newgrounds.com/
 Github: https://github.com/lmlstudio
