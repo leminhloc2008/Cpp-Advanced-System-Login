@@ -109,9 +109,9 @@ int main()
     }
     return 0;
 }
-//Programed By LML STUDIO
+//Programed By Le Minh Loc
 //Page: https://lml-studio.itch.io/
-//You can use my code without credit but I'll appreciate if you do
+//You can use my code without credit but I would appreciate if you do
 /*Change logs:
   v1.0(05/03/2021): Project Finished
   v2.0(14/03/2021): Added a feature that if the user type the username password wrong 5 times then the program wil stop
