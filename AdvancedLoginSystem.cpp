@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<windows.h>
 #include<dos.h>
-//#include<dirent.h>
+#include<dirent.h>
 #include<fstream>
 #include<iostream>
 #include<string>
@@ -26,7 +26,7 @@ void SetColor(int ForgC)
 int main()
 {
     bool login_successful = false;
-    long long option, remain = 5;
+    long long option, remain = 6;
     string account_name, account_name_login, password, password_login, username;
     SetColor(14);
     cout << "Welcome to my login system, made by LML STUDIO" << endl << "[Press 1] to sign up" << endl << "[Press 2] to login" << endl << "[Press 3] if you forgot your account password" << endl;
@@ -79,12 +79,12 @@ int main()
                 login_successful = false;
             }
         } 
-        while (!login_successful && remain != -1);
-        if (remain == -1)
+        while (!login_successful && remain != 0);
+        if (remain == 0)
         {
             SetColor(12);
             cout << "You have 0 times left to try" << endl << "The program will now exit";
-            Sleep(1);
+            Sleep(5);
             return 0;
         }
     }
