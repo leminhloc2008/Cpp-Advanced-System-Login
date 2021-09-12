@@ -10,6 +10,7 @@
 
 using namespace std;
 
+//just to change text color, not necessary
 void SetColor(int ForgC)
 {
     WORD wColor;
