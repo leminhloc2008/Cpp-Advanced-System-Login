@@ -27,28 +27,49 @@ void SetColor(int ForgC)
 int main()
 {
     bool login_successful = false;
-    long long option, remain = 6;
-    string account_name, account_name_login, password, password_login, username;
+    long option = 6; 
+    long remain = 6;
+    string account_name;
+    string account_name_login;
+    string password;
+    string password_login;
+    string username;
+
     SetColor(14);
     cout << "Welcome to my login system, made by LML STUDIO" << endl << "[Press 1] to sign up" << endl << "[Press 2] to login" << endl << "[Press 3] if you forgot your account password" << endl;
     cout << "Your Option: ";
-    cin >> option;
+    cin >> option; // Program checks for input after printing out some stuff.
+                   // this input is then put into the variable "option".
+    // If option after input evaluates to '1'
     if (option == 1)
     {
+        // System is set to color 11
         SetColor(11);
-        cout << "Create an user name: ";
-        cin >> account_name;
-        cout << endl;
-        cout << "Create a password: ";
-        cin >> password;
-        cout << endl;
-        ofstream user_info;
-        user_info.open("user_" + account_name + ".txt");
-        user_info << account_name << endl << password;
-        user_info.close();
-        SetColor(10);
-        cout << "Your account has been saved!" << endl << endl;
-        main();
+        cout << "Create an user name: "; // Asks for username input and 
+        cin >> account_name;            // this input is then stored in 'account_name'
+
+        ifstream tester;
+        tester.open("user_" + account_name + ".txt");
+        if (tester.fail()){
+            cout << endl;                  // skip line after getting input and
+            cout << "Create a password: ";// asks for password input.
+            cin >> password;             // next input is then stored in a variable called 'password'
+            cout << endl;               // skip line after getting second input and 
+
+            ofstream user_info;                               // calls the ofstream file manager initializer
+            user_info.open("user_" + account_name + ".txt"); // the initializer is then opened into a new file
+            user_info << account_name << endl << password;  // then, account name and password is inserted in the file
+            user_info.close();    
+                                    // file is then closed after operations is done.
+        } else {
+            SetColor(30);
+            cout << "Failed: Username already in use!" << endl << endl;
+            main();
+        }
+
+        SetColor(10);                                 // system color is then set to 10
+        cout << "Your account has been saved!" << endl << endl; 
+        main(); // main function is called to wait for second input, this works in a recursive manner.
     }
     else if (option == 2)
     {
@@ -75,7 +96,8 @@ int main()
             else
             {
                 SetColor(4);
-                cout << endl << "Invaild username or password" << endl << "You have " << remain << " times left to try!" << endl << "Please try again!" << endl;
+                cout << endl << "Invaild username or password" << endl << "You have " 
+                << remain << " times left to try!" << endl << "Please try again!" << endl;
                 remain--;
                 login_successful = false;
             }
@@ -109,11 +131,3 @@ int main()
     }
     return 0;
 }
-//Programed By Le Minh Loc
-//Page: https://lml-studio.itch.io/
-//You can use my code without credit but I would appreciate if you do
-/*Change logs:
-  v1.0(05/03/2021): Project Finished
-  v2.0(14/03/2021): Added a feature that if the user type the username password wrong 5 times then the program wil stop
-  v3.0(22/03/2021): Make the code more beautiful, easy to read. Compatibility with Visual Studio 2019
-*/
